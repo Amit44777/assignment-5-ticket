@@ -49,7 +49,7 @@ for(const btn of btnAll){
 function updateGrandTotal(status){
     const totalCost = getConvardValue("total-cost");
     if(status == undefined){
-        document.getElementById("grand-cost").innerText = totalCost;
+        document.getElementById("total-cost").innerText = totalCost;
     }
     else{
         const couponCode = document.getElementById("copon-code").value;
