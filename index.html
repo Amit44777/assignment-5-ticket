@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ticket</title>
 
     <!-- daisy ui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-  .roboto{
-      font-family: 'Manrope', sans-serif;
-  }
-</style>
+    <!-- tailwind custom -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
 
 </head>
 <body class="roboto">
@@ -45,8 +51,8 @@
                 <div class=""></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="">
-                    <h1 class="mb-5 text-5xl font-extrabold">End-to-End Travel with <br> <span class="text-green-400">Shohag Paribahan</span></h1>
-                    <p class="mb-5">Here we will provide you one of the best and favorable buses <br>in Bangladesh. And that is the Shohag Poribahan.</p>
+                    <h1 class="mb-5 text-6xl font-extrabold pb-4">End-to-End Travel with <br> <span class="text-green-400">Shohag Paribahan</span></h1>
+                    <p class="pb-8">Here we will provide you one of the best and favorable buses <br>in Bangladesh. And that is the Shohag Poribahan.</p>
                     <button class="btn bg-green-600 border-none w-36 h-14 rounded-lg">Buy Tickets</button>
                   </div>
                 </div>
@@ -54,11 +60,11 @@
         </section>
          <!-- Banner Section End --> 
     </header>
-    <main>
+
       <!-- Best Offers Section Start -->
-      <section class="container mx-auto mb-20">
-        <h1 class="font-bold text-3xl text-center mt-20">Best offers for you</h1>
-        <div class="grid grid-cols-2 gap-10 mt-6">
+      <section class="container mx-auto mb-24">
+        <h1 class="font-bold text-3xl text-center mt-24">Best offers for you</h1>
+        <div class="grid grid-cols-2 gap-10 mt-8">
           <div class="bg-[#FFBF0F] flex justify-around pt-12 pb-12 gap-10 rounded-2xl">
             <div class="">
               <h1 class="font-extrabold text-3xl">15 % OFF</h1>
@@ -86,15 +92,17 @@
           <button class="btn bg-white mt-8 text-green-400 ">See All Offers</button>
         </div>
       </section>
-      <!-- Best Offers Section End -->
-      <!-- <section class=" bg-[#F7F8F8] border-t-4 border-green-500 rounded-3xl  grid grid-rows-8">
+      <!-- Best Offers Section End  -->
+   <main class="bg-[#F7F8F8]">
+    <section class="border-t-4 border-green-500 rounded-3xl mb-10">
        <span class="text-center">
-        <h1 class="font-bold text-2xl mt-20 mb-5">P.H Paribahan</h1>
-        <p> Buses is a convenient option both for those who travel on a shoestring budget and <br>those who do not want to compromise on comfort.</p>
-      </span>
-        <div class="container mx-auto bg-white grid grid-cols-2">
-          <div>
-            <div class="flex justify-between mt-10 pt-8">
+          <h1 class="font-bold text-2xl mb-5 mt-10">P.H Paribahan</h1>
+          <p class="mb-10"> Buses is a convenient option both for those who travel on a shoestring budget and <br>those who do not want to compromise on comfort.</p>
+        </span>
+
+        <div class="container mx-auto bg-white p-8 rounded-xl grid grid-cols-4">
+          <div class="col-span-3">
+            <div class="flex justify-between ">
               <div class="flex justify-center items-center">
                 <div>
                   <img src="images/bus-logo.png" alt="">
@@ -105,143 +113,200 @@
                 </div>
               </div>
               <div>
-                <h1 class="flex justify-center items-center text-green-400 bg-green-100 pt-3 pb-3 pl-3 pr-3 rounded-lg"><img class="pr-2" src="images/bus-icon.png" alt="">40 seats left</h1>
+                <h1 class="minus-price flex justify-center items-center text-green-400 bg-green-100 pt-3 pb-3 pl-3 pr-3 rounded-lg mb-10"><img class="pr-2" src="images/bus-icon.png" alt=""><span class="pr-1" id="minusTickets">40 </span>  seats left</h1>
               </div>
             </div>
-            <div>
+            <div class="bg-gray-50 p-4 rounded-xl">
               <div class="flex justify-between">
                 <p>Route</p>
                 <h2>Dhaka-Sylhet</h2>
               </div>
-              <div class="flex justify-between">
+              <hr class="border-dashed mt-4">
+              <div class="flex justify-between mt-4">
                 <p>Departure Time</p>
                 <h2>9.00 PM</h2>
               </div>
-              <div class="flex justify-between">
-                <button>Boarding Point - Laxmipur</button>
-                <button>Dropping Point - Bogura</button>
-                <button>Est. Time - 11 Hour</button>
+              <hr class="border-dashed mt-4 mb-4">
+              <div class="flex justify-between mt-4">
+                <button class="btn bg-gray-200 rounded-lg border-none">Boarding Point - Laxmipur</button>
+                <button class="btn bg-gray-200 rounded-lg border-none">Dropping Point - Bogura</button>
+                <button class="btn bg-gray-200 rounded-lg border-none">Est. Time - 11 Hour</button>
               </div>
             </div>
           </div>
-          <div class="grid-rows-4">
-            <img src="images/fare.png" alt="">
-            <h1>550 Taka</h1>
-            <p>Per Seat</p>
-          </div>
-        </div>
-      </section> -->
-     </main>
-
-     <section class="container mx-auto mb-20">
-      <div>
-        <h1 class="mb-5 font-bold text-xl">Select Your Seat</h1>
-      <hr class="border-dashed">
-      <div class="flex justify-between mt-3">
-        <p class="flex items-center"> <img src="images/seat-gray.png" alt="">Available</p>
-        <p class="flex items-center"><img src="images/seat-green-filled.png" alt=""> Selected</p>
-      </div>
-      <hr class="border-dashed mt-3">
-      <div class="flex justify-end mt-5">
-        <img src="images/group.png" alt="">
-      </div>
-      <div class="flex justify-between p-4">
-        <div class=" ">
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">A</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">B</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">C</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">D</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">E</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">F</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">G</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">H</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">I</p>
-          <p class="pr-5 pl-5 pt-2 pb-2 mb-4">J</p>
-        </div>
-        <div class="">
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">A1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">B1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">C1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">D1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">E1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">F1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">G1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">H1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">I1</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">J1</p>
-        </div>
-        <div class="">
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">A2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">B2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">C2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">D2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">E2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">F2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">G2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">H2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">I2</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">J2</p>
-        </div>
-        <div class="">
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">A3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">B3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">C3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">D3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">E3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">F3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">G3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">H3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">I3</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">J3</p>
-        </div>
-        <div class="">
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">A4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">B4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">C4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">D4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">E4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">F4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">G4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">H4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">I4</p>
-          <p class="bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg">J4</p>
-        </div>
-      </div>
-      <div class="bg-gray-50">
-        <h1 class="font-bold text-xl mb-5">Select Your Seat</h1>
-        <hr class="border-dashed">
-        <div class="">
-          <div class="flex justify-between mt-4">
-            <div>
-              <h2 class="font-bold">Seat <span class="bg-green-400 pl-3 pr-3 rounded-md text-white">2</span></h2>
+          <div class="text-center items-center mt-20">
+            <div class="flex justify-center mb-4">
+              <img src="images/fare.png" alt="">
             </div>
-            <div>
-              <h2 class="font-bold">Class</h2>
-            </div>
-            <div>
-              <h2 class="font-bold">Price</h2>
+              <div>
+                <h1 class="text-2xl font-extrabold"><span class="price-cost">550</span> Taka</h1>
+                <p class="text-xl">Per Seat</p>
             </div>
           </div>
-          <hr class="border-dashed mt-4">
-
-
-         <div class="mt-4">
-            <div class="flex justify-between">
-              <div class="">c2</div>
-              <div class="">Economoy</div>
-              <div class="">550</div>
-            </div>
-            <div class="flex justify-between">
-              <div class="">c2</div>
-              <div class="">Economoy</div>
-              <div class="">550</div>
-            </div>
-           <br class="border-dashed">
-         </div>
-
         </div>
-      </div>
-    </section>
-    
+      </section>
+     
+    <section class="container mx-auto">
+      <div class="grid grid-cols-6 gap-10">
+        <div class="col-span-4">
+          <h1 class="mb-5 font-bold text-xl">Select Your Seat</h1>
+          <hr class="border-dashed">
+            <div class="flex justify-between mt-3">
+                <p class="flex items-center"> <img src="images/seat-gray.png" alt="">Available</p>
+                <p class="flex items-center"><img src="images/seat-green-filled.png" alt=""> Selected</p>
+              </div>
+              <hr class="border-dashed mt-3">
+              <div class="flex justify-end mt-5">
+                <img class="w-22 h-14 pr-4" src="images/group.png" alt="">
+              </div>
+              <div class="flex justify-between p-4">
+                <div class=" ">
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">A</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">B</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">C</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">D</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">E</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">F</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">G</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">H</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">I</p>
+                  <p class="pr-5 pl-5 pt-2 pb-4 mb-4">J</p>
+                </div>
+                <div class="flex flex-col seat-list">
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-10 pl-10 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">A1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-4 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">B1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">C1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">D1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">E1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">F1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">G1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">H1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">I1</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">J1</span></div>
+                </div>
+                <div class="flex flex-col mr-14">
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-10 pl-10 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">A2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-4 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">B2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">C2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">D2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">E2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">F2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">G2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">H2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">I2</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">J2</span></div>
+                </div>
+                <div class="flex flex-col">
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-10 pl-10 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">A3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-4 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">B3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">C3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">D3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">E3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">F3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">G3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">H3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">I3</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">J3</span></div>
+                </div>
+                <div class="flex flex-col">
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-10 pl-10 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">A4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-4 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">B4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">C4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">D4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">E4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">F4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">G4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">H4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">I4</span></div>
+                  <div onclick="handleButton(this)" class="btn bg-gray-200 pr-5 pl-5 pt-2 pb-2 mb-4 rounded-lg"><span class="type-btn">J4</span></div>
+                </div>
+              </div>
+          </div>
+
+
+              <div class="col-span-2">
+                <h1 class="font-bold text-xl pb-5 pl-5">Select Your Seat</h1>
+                  <hr class="border-dashed">
+                  <div class=" bg-gray-100 p-6 mt-6 rounded-xl">
+                  <div class="flex justify-between">
+                    <div>
+                      <h2 class="font-bold">Seat <span id="total-sit" class=" bg-green-400 pl-3 pr-3 rounded-md text-white">0</span></h2>
+                    </div>
+                    <div>
+                      <h2 class="font-bold">Class</h2>
+                    </div>
+                    <div>
+                      <h2 class="font-bold">Price</h2>
+                    </div>
+                  </div>
+                  <hr class="border-dashed mt-4">
+
+                  <div id="selected-price">
+                  </div>
+                  
+                  <hr class="border-dashed">
+                  <div class="flex justify-between mt-4 mb-4 font-semibold">
+                    <h2>Total Price</h2>
+                    <h2>BDT <span id="total-cost">0</span></h2>
+                  </div>
+                  <label class="input input-bordered flex items-center h-14">
+                    <input id="copon-code" type="text" class="grow" placeholder="Have any copupon?" />
+                    <button onclick="updateGrandTotal('apply-btn')" class="btn pt-2 pb-2 pl-3 pr-3 rounded-xl bg-green-400">Apply</button>
+                  </label>
+                  
+                  <div class="flex justify-between mt-4 font-semibold">
+                    <h2>Grand Total</h2>
+                    <h2>BDT <span id="grand-cost">0</span></h2>
+                  </div>
+                </div>
+
+                  <div class="pt-4 pb-4">
+                  <h1 class="text-lg font-bold mb-4">Passenger Name*</h1>
+                  <div>
+                    <input type="text" placeholder="Enter your name" class="w-full h-12 px-6 border ">
+                  </div>
+                
+                <div>
+                  <h1 class="text-lg font-bold mb-4 mt-4">Phone Number*</h1>
+                  <div>
+                    <input type="text" placeholder="Enter your phone number" class="w-full h-12 px-6 border ">
+                  </div>
+                </div>
+                <div>
+                  <h1 class="text-lg font-bold mb-4 mt-4">Email ID</h1>
+                  <div>
+                    <input type="text"  placeholder="Enter your email id" class="w-full h-12 px-6 border mb-4">
+                  </div>
+                </div>
+                <div id="home-screen" class="">
+                  <button class=" w-full h-12 px-6 text-indigo-100 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outlin mb-4 font-bold" onclick="handleButton(this)">Next</button>
+                </div>
+                <div class="flex justify-evenly">
+                  <p class="border-b-2 border-black">Terms and Conditions</p>
+                  <p class="border-b-2 border-black">Cancellation Policy</p>
+                </div>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <section id="play-ground" class="hidden container mx-auto mt-8 p-6 bg-[#fcf6f6] rounded-md text-center">
+    <div class="bg-white m-20">
+        <div class="flex justify-center mb-4 pt-8">
+          <img src="images/success.png" alt="">
+        </div>
+          <h1 class="text-lg text-green-600 font-semibold mb-6">SUCCESS</h1>
+        <h3 class="text-gray-700 font-bold mb-2">Thank you for Booking Our Bus Seats.</h3>
+        <h3 class="text-gray-700 font-bold mb-2"> We are working hard to find the best service and deals for you.</h3>
+        <p> Shortly you will find a confirmation in your email.</p>
+        <button class="btn pl-16 pr-16 mt-4 bg-green-500 rounded-3xl mb-8">Continue</button>
+    </div>
+  </section>
+
+
+
+  <!-- <scrip src="./app.js"></script> -->
+    <script src="./add.js"></script>
+
 </body>
 </html>
