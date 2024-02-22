@@ -4,11 +4,6 @@ function handleButton(event){
     event.classList.add('bg-green-500'); 
     event.style.color = 'white';
 
-    const homeScreen = document.getElementById("home-screen");
-    homeScreen.classList.add("hidden");
-    const palyGround = document.getElementById("play-ground");
-    palyGround.classList.remove("hidden");
-
     const selectedContainer = document.getElementById("selected-price");
     const itemName = event.innerText;
 
@@ -84,3 +79,10 @@ function getConvardValue(id){
 
 
 
+
+   function nextButton(){
+    const homeScreen = document.getElementById("home-screen");
+    homeScreen.classList.add("hidden");
+    const palyGround = document.getElementById("play-ground");
+    palyGround.classList.remove("hidden");
+   }

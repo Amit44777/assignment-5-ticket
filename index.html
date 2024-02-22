@@ -251,7 +251,7 @@
                   </div>
                   <label class="input input-bordered flex items-center h-14">
                     <input id="copon-code" type="text" class="grow" placeholder="Have any copupon?" />
-                    <button onclick="updateGrandTotal('apply-btn')" class="btn pt-2 pb-2 pl-3 pr-3 rounded-xl bg-green-400">Apply</button>
+                    <button onclick="updateGrandTotal(this)" class="btn pt-2 pb-2 pl-3 pr-3 rounded-xl bg-green-400">Apply</button>
                   </label>
                   
                   <div class="flex justify-between mt-4 font-semibold">
@@ -279,7 +279,8 @@
                   </div>
                 </div>
                 <div id="home-screen" class="">
-                  <button class=" w-full h-12 px-6 text-indigo-100 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outlin mb-4 font-bold" onclick="handleButton(this)">Next</button>
+                  <button class=" w-full h-12 px-6 text-indigo-100 transition-colors duration-150 
+                  bg-green-500 rounded-lg focus:shadow-outlin mb-4 font-bold" onclick="nextButton(this)">Next</button>
                 </div>
                 <div class="flex justify-evenly">
                   <p class="border-b-2 border-black">Terms and Conditions</p>
